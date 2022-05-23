@@ -1,0 +1,7 @@
+---
+# tasks file for managerclonerepo
+
+- git: 
+    repo: https://github.com/M-Talha-Saeed/docker-project2.git
+    dest: /home/talhas/docker-project2
+    
