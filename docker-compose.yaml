@@ -1,0 +1,36 @@
+version: '3.8'
+services:
+  service_1:
+    build: ./api1/application/
+    image: talhas015/api1:latest
+    ports:
+    - published: 5000
+      target: 5000
+      protocol: tcp
+    
+
+  service_2:
+    build: ./api2/application/
+    image: talhas015/api2:latest
+    ports:
+    - published: 5001
+      target: 5001
+      protocol: tcp   
+
+
+  service_3:
+    build: ./api3/application/
+    image: talhas015/api3:latest
+    ports:
+    - published: 5002
+      target: 5002
+      protocol: tcp
+
+
+  service_4:
+    build: ./api4/application/
+    image: talhas015/api4:latest
+    ports:
+    - published: 5003
+      target: 5003
+      protocol: tcp 
