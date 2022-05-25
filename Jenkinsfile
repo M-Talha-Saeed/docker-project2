@@ -17,27 +17,26 @@ pipeline{
         }
         stage('Installs'){
             steps{
-                sh 'ls'
-                sh 'cd docker-project2 && pip3 install -r requirements.txt'
+                sh 'pip3 install -r requirements.txt'
             }
         }
         stage('Testing'){
             steps{
-                sh 'cd docker-project2 && cd api1 && python3 -m pytest --cov=application'
-                sh 'cd docker-project2 && cd api2 && python3 -m pytest --cov=application'
-                sh 'cd docker-project2 && cd api3 && python3 -m pytest --cov=application'
-                sh 'cd docker-project2 && cd api4 && python3 -m pytest --cov=application'
+                sh 'cd api1 && python3 -m pytest --cov=application'
+                sh 'cd api2 && python3 -m pytest --cov=application'
+                sh 'cd api3 && python3 -m pytest --cov=application'
+                sh 'cd api4 && python3 -m pytest --cov=application'
             }
         }
         stage('Build & Deploy'){
             steps{
-                sh 'cd docker-project2 && docker-compose build'
-                sh 'cd docker-project2 && docker-compose push'
+                sh 'sudo docker-compose build'
+                sh 'sudo docker-compose push'
             }
         }
         stage('Deploy'){
             steps{
-                sh 'cd docker-project2 && docker-compose up'
+                sh 'sudo docker-compose up -d'
             }
         }
     }
