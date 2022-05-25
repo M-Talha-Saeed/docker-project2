@@ -32,17 +32,17 @@ The objectives that were given are:
 
 You are required to create a service-orientated architecture for your application, this application must be composed of at least 4 services that work together.
 
-Service #1  
+### Service #1:    
 The core service – this will render the Jinja2 templates you need to interact with your application, it will also be responsible for communicating with the other 3 services, and finally for persisting some data in an SQL database.  
 
 This objective has been mostly met. However I have not used any SQL databases
 
-Service #2 + #3  
+### Service #2 + #3:    
 These will both generate a random “Object”, this object can be whatever you like as we encourage creativity in this project.  
 
 In my case, my service 2 generates a random country and my service 3 generates a random activity that the user can do in that country
 
-Service #4  
+### Service #4  
 This service will also create an “Object” however this “Object” must be based upon the results of service #2 + #3 using some pre-defined rules.
 Please see below for an example of how this logic can look.
 
@@ -176,7 +176,7 @@ Throughout the development of my project, I used feature branching on github whe
 
 My network can be seen below:
 
-![feature-network]()
+![feature-network](./images/feature.png)
 
 ### Unit Testing  
 
@@ -226,7 +226,7 @@ Jenkins test Service 4:
 
 My aim for the front-end design was simplicity and to focus on the output of the service 1 to be correct rather than aesthetics. I chose to focus on the automation and deployment processes on this project rather than making the app highly functional. This is because I wanted to try and perfect my understanding of the devops procedures of automating in this project as I already felt confident in my ability to make a flask app from the precious project.
 
-Once the user navigates to the URL, service 1 is shown, which displays the manipulation that occurs in my service 4:
+Once the user navigates to the URL, service 1 is shown, which displays the manipulations of services 2 & 3 that occur in service 4.
 
 The first word displayed is the randomly generated country.  
 The second word displayed is the randomly generated activity.  
@@ -250,6 +250,7 @@ Overall, I would class this project as a success. However this never rules out t
 ## Video Recording
 
 Here is the link to the video presentation of my project:  
+https://drive.google.com/file/d/1CRdGSsbpFrXRAUEo0IjaaoTU3qXwVoky/view?usp=sharing 
 
 
 ## Licencing
