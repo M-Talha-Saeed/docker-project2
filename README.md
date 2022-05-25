@@ -99,7 +99,7 @@ My board contains:
 
 ### CI Pipeline
 
-![CI](./images/ci_pipeline.png)
+![CI](./images/ci-pipeline1.png)
 
 The continuous integration pipeline I have used has been shown above. This contains the the frameworks used for my project. The steps have been orchestrated in order to take my source code from development to deployment. The automation process has all been included and integrated in the pipeline as well  
 
