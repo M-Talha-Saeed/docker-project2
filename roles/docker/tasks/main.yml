@@ -1,7 +1,14 @@
 ---
 # tasks file for docker
+- name: Install python3 pip
+  apt:
+    pkg:
+    - python3
+    - python3-pip
+    state: latest
+    update_cache: true
+
 - name: update and upgrade apt
-  become: true
   apt:
     upgrade: true
     update_cache: true
@@ -9,8 +16,6 @@
 - name: 'Install docker requirements'
   apt:
     pkg:
-    - python3
-    - python3-pip
     - apt-transport-https
     - ca-certificates
     - curl
